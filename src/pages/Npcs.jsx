@@ -436,17 +436,22 @@ export function AstroTommy() {
 
       <h3>Shop Items</h3>
       <table className="wiki-table">
-        <thead><tr><th>Item</th><th>Cost</th></tr></thead>
+        <thead><tr><th>Item</th><th>Cost</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td>Dice of Fate</td><td>500 Stardust</td></tr>
-          <tr><td>Chamber Diamond Key</td><td>3,500 Stardust</td></tr>
-          <tr><td>Chamber Emerald Key</td><td>6,500 Stardust</td></tr>
-          <tr><td>Common Ancient Book</td><td>5,000 Stardust</td></tr>
-          <tr><td>Rare Ancient Book</td><td>8,500 Stardust</td></tr>
+          <tr><td><b>Dice of Fate</b></td><td>500 Stardust</td><td>A mysterious dice that determines fate</td></tr>
+          <tr><td><b>Shulker Box</b></td><td>1,000 Stardust</td><td>A portable storage container</td></tr>
+          <tr><td><b>Chamber Diamond Key</b></td><td>3,500 Stardust</td><td>A key to the Diamond Chamber dungeon</td></tr>
+          <tr><td><b>Undeciphered Common Tome</b></td><td>5,000 Stardust</td><td>A common ancient book waiting to be deciphered</td></tr>
+          <tr><td><b>Nether Star</b></td><td>5,000 Stardust</td><td>A blazing star from the Nether</td></tr>
+          <tr><td><b>Chamber Emerald Key</b></td><td>6,500 Stardust</td><td>A key to the Emerald Chamber dungeon</td></tr>
+          <tr><td><b>Undeciphered Rare Tome</b></td><td>8,500 Stardust</td><td>A rare ancient book waiting to be deciphered</td></tr>
+          <tr><td><b>Terravore</b></td><td>10,000 Stardust</td><td>A legendary pickaxe that mines in a 3x3 radius</td></tr>
+          <tr><td><b>Undeciphered Legendary Tome</b></td><td>15,000 Stardust</td><td>A legendary ancient tome waiting to be deciphered</td></tr>
+          <tr><td><b>Death Penalty Bypass</b></td><td>200,000 Stardust</td><td>Permanently bypass the death penalty — no more losing money on death (one-time purchase)</td></tr>
         </tbody>
       </table>
 
-      <Callout type="info"><b>Start saving now!</b> The Stardust Shop is still in its early stages. The admins plan to add more valuable and exclusive items in future updates — start accumulating stardust as early as you can. You won't regret it later!</Callout>
+      <Callout type="tip"><b>Top Pick:</b> The <b>Death Penalty Bypass</b> is the most valuable item in the shop — once purchased, you'll never lose gold on death again. Start saving early!</Callout>
     </>
   );
 }
