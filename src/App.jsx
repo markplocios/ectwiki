@@ -54,10 +54,16 @@ export default function App() {
   };
 
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash && PAGES[hash]) {
-      setCurrentPage(hash);
-    }
+    const onHash = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash && PAGES[hash]) {
+        setCurrentPage(hash);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+    onHash();
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
   }, []);
 
   useEffect(() => {
