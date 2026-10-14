@@ -1,7 +1,7 @@
 export const NAV = [
   { id: 'welcome', label: 'Welcome' },
   { id: 'worlds', label: 'Worlds', children: [
-    { id: 'worlds/town', label: 'Town (Hub)' },
+    { id: 'worlds/town', label: 'Extremia (Hub)' },
     { id: 'worlds/elysium', label: 'Elysium (Blessed by the Gods)' },
     { id: 'worlds/frontier', label: 'Frontier (Forsaken by the Gods)' },
   ]},
