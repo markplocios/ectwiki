@@ -43,7 +43,7 @@ export default function Economy() {
         <div className="cmd-row"><code>/dpimmunity &lt;hrs&gt;</code><span className="cmd-desc">Buy temporary immunity (10,000/hr)</span></div>
       </div>
 
-      <Callout type="tip"><b>Tip:</b> Keep your wallet under 1,000 gold and deposit everything else in the Bank. You lose nothing on death if your wallet is under 1,000. You can also buy a permanent death penalty bypass from the <b>Stardust Store</b> for <b>200,000 Stardust</b>.</Callout>
+      <Callout type="tip"><b>Tip:</b> Keep your wallet under 1,000 gold and deposit everything else in the Bank. You lose nothing on death if your wallet is under 1,000. You can also buy a permanent death penalty bypass from the <b>Stardust Store</b> for <b>200,000 Stardust</b>. Visit the <b>Stardust Collector (AstroTommy)</b> NPC for more info — <a href="#npcs/astrotommy" style={{ color: 'var(--gold)', fontWeight: 600 }}>click here</a>.</Callout>
     </>
   );
 }
