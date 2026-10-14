@@ -287,7 +287,7 @@ export function Enchanter() {
       <h2>Skip Logic</h2>
       <p>When combining items with multiple enchantments, the enchanter doesn't reject the whole operation if one enchant is incompatible. Instead it <b>skips</b> the incompatible ones and applies the rest. You'll see a message for each skipped enchantment with the reason.</p>
 
-      <Callout type="tip"><b>Tip:</b> The enchanter also supports all <b>Excellent Enchants</b> custom enchantments with their proper item type restrictions and conflict groups.</Callout>
+      <Callout type="tip"><b>Tip:</b> Elara also supports all <b>Unique Enchantments</b> with their proper item type restrictions and conflict groups.</Callout>
     </>
   );
 }
@@ -336,7 +336,7 @@ export function Decipherer() {
       </ul>
 
       <h2>Enchant Wiki</h2>
-      <p>The panel also has a <b>Wiki tab</b> at the bottom that shows all available Excellent Enchants and their descriptions. Use it to browse what enchantments exist on the server.</p>
+      <p>The panel also has a <b>Wiki tab</b> at the bottom that shows all available <b>Unique Enchantments</b> and their descriptions. Use it to browse what enchantments exist on the server.</p>
     </>
   );
 }
