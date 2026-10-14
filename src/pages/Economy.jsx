@@ -41,10 +41,9 @@ export default function Economy() {
       <div className="cmd-list">
         <div className="cmd-row"><code>/dpstatus</code><span className="cmd-desc">Check your current death penalty rate</span></div>
         <div className="cmd-row"><code>/dpimmunity &lt;hrs&gt;</code><span className="cmd-desc">Buy temporary immunity (10,000/hr)</span></div>
-        <div className="cmd-row"><code>/dpbypass</code><span className="cmd-desc">Buy permanent bypass (500,000 gold)</span></div>
       </div>
 
-      <Callout type="tip"><b>Tip:</b> Keep your wallet under 1,000 gold and deposit everything else in the Bank. You lose nothing on death if your wallet is under 1,000.</Callout>
+      <Callout type="tip"><b>Tip:</b> Keep your wallet under 1,000 gold and deposit everything else in the Bank. You lose nothing on death if your wallet is under 1,000. You can also buy a permanent death penalty bypass from the <b>Stardust Store</b> for <b>200,000 Stardust</b>.</Callout>
     </>
   );
 }
