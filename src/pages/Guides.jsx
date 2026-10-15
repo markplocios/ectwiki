@@ -535,27 +535,27 @@ export function RenameToken() {
       <h3>Basic Colors</h3>
       <div className="card-grid cols-2">
         <div className="card">
-          <div className="card-text" style={{ fontFamily: 'monospace', lineHeight: 2 }}>
-            <span><code>&0</code> Black</span><br />
-            <span><code>&1</code> Dark Blue</span><br />
-            <span><code>&2</code> Dark Green</span><br />
-            <span><code>&3</code> Dark Aqua</span><br />
-            <span><code>&4</code> Dark Red</span><br />
-            <span><code>&5</code> Dark Purple</span><br />
-            <span><code>&6</code> Gold</span><br />
-            <span><code>&7</code> Gray</span>
+          <div className="card-text" style={{ fontFamily: 'monospace', lineHeight: 2.2 }}>
+            <span><code>&0</code> <span style={{ color: '#000', background: '#333', padding: '1px 8px', borderRadius: 3 }}>Black</span></span><br />
+            <span><code>&1</code> <span style={{ color: '#0000AA' }}>Dark Blue</span></span><br />
+            <span><code>&2</code> <span style={{ color: '#00AA00' }}>Dark Green</span></span><br />
+            <span><code>&3</code> <span style={{ color: '#00AAAA' }}>Dark Aqua</span></span><br />
+            <span><code>&4</code> <span style={{ color: '#AA0000' }}>Dark Red</span></span><br />
+            <span><code>&5</code> <span style={{ color: '#AA00AA' }}>Dark Purple</span></span><br />
+            <span><code>&6</code> <span style={{ color: '#FFAA00' }}>Gold</span></span><br />
+            <span><code>&7</code> <span style={{ color: '#AAAAAA' }}>Gray</span></span>
           </div>
         </div>
         <div className="card">
-          <div className="card-text" style={{ fontFamily: 'monospace', lineHeight: 2 }}>
-            <span><code>&8</code> Dark Gray</span><br />
-            <span><code>&9</code> Blue</span><br />
-            <span><code>&a</code> Green</span><br />
-            <span><code>&b</code> Aqua</span><br />
-            <span><code>&c</code> Red</span><br />
-            <span><code>&d</code> Light Purple</span><br />
-            <span><code>&e</code> Yellow</span><br />
-            <span><code>&f</code> White</span>
+          <div className="card-text" style={{ fontFamily: 'monospace', lineHeight: 2.2 }}>
+            <span><code>&8</code> <span style={{ color: '#555555' }}>Dark Gray</span></span><br />
+            <span><code>&9</code> <span style={{ color: '#5555FF' }}>Blue</span></span><br />
+            <span><code>&a</code> <span style={{ color: '#55FF55' }}>Green</span></span><br />
+            <span><code>&b</code> <span style={{ color: '#55FFFF' }}>Aqua</span></span><br />
+            <span><code>&c</code> <span style={{ color: '#FF5555' }}>Red</span></span><br />
+            <span><code>&d</code> <span style={{ color: '#FF55FF' }}>Light Purple</span></span><br />
+            <span><code>&e</code> <span style={{ color: '#FFFF55' }}>Yellow</span></span><br />
+            <span><code>&f</code> <span style={{ color: '#FFFFFF' }}>White</span></span>
           </div>
         </div>
       </div>
