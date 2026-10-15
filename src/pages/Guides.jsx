@@ -16,7 +16,7 @@ export function Waystones() {
 
       <h2>How to Create a Waystone</h2>
       <ol>
-        <li>Craft or obtain a <b>Lodestone</b> (requires netherite ingot + chiseled stone bricks).</li>
+        <li>Craft or obtain a <b>Lodestone</b> (requires iron ingot + chiseled stone bricks).</li>
         <li>Place the lodestone where you want your waystone.</li>
         <li>Get a <b>Compass</b> and <b>rename it</b> on an anvil — the name you give the compass will become the name of the waystone.</li>
         <li>Hold the renamed compass and <b>right-click the lodestone</b> to register it as a waystone.</li>
