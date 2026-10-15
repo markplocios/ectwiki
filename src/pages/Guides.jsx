@@ -490,3 +490,127 @@ export function AfkRewards() {
     </>
   );
 }
+
+export function RenameToken() {
+  return (
+    <>
+      <h1>Rename Token</h1>
+      <p className="page-desc">Rename any item with full color and formatting support. Use color codes, hex colors, and gradients to create unique item names.</p>
+
+      <h2>How to Get a Rename Token</h2>
+      <p>Rename Tokens can be obtained through <b>Premium Ranks</b> or the <b>rotating shop</b> when available.</p>
+
+      <h2>How to Use</h2>
+      <h3>Method 1: Interactive Mode (Recommended)</h3>
+      <ol>
+        <li><b>Right-click</b> (Java) or <b>Long-press</b> (Bedrock) the Rename Token</li>
+        <li>Type your desired name in chat (e.g. <code>&6Golden &eSword</code>)</li>
+        <li>Type <code>@</code> to preview how it looks (optional)</li>
+        <li><b>Hold the item</b> you want to rename — not the token!</li>
+        <li>Type <code>@@</code> to confirm — the token is consumed</li>
+      </ol>
+
+      <h3>Method 2: Quick Command</h3>
+      <ol>
+        <li>Hold the item you want to rename</li>
+        <li>Type <code>/ui rename &lt;name&gt;</code></li>
+      </ol>
+      <p>Example: <code>/ui rename &c&lLEGENDARY SWORD</code></p>
+
+      <h3>Chat Commands</h3>
+      <table className="wiki-table">
+        <thead><tr><th>Command</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><code>@@</code></td><td>Confirm rename (hold item first!)</td></tr>
+          <tr><td><code>@</code></td><td>Preview your name</td></tr>
+          <tr><td><code>##</code></td><td>Cancel and keep your token</td></tr>
+        </tbody>
+      </table>
+
+      <Callout type="warn"><b>Important:</b> Hold the item you want to rename <b>before</b> typing <code>@@</code> — not the token! You cannot rename the token itself.</Callout>
+
+      <h2>Color Codes</h2>
+      <p>Use <code>&</code> followed by a code to add color and formatting. Never use <code>§</code> — always use <code>&</code>.</p>
+
+      <h3>Basic Colors</h3>
+      <div className="card-grid cols-2">
+        <div className="card">
+          <div className="card-text" style={{ fontFamily: 'monospace', lineHeight: 2 }}>
+            <span><code>&0</code> Black</span><br />
+            <span><code>&1</code> Dark Blue</span><br />
+            <span><code>&2</code> Dark Green</span><br />
+            <span><code>&3</code> Dark Aqua</span><br />
+            <span><code>&4</code> Dark Red</span><br />
+            <span><code>&5</code> Dark Purple</span><br />
+            <span><code>&6</code> Gold</span><br />
+            <span><code>&7</code> Gray</span>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-text" style={{ fontFamily: 'monospace', lineHeight: 2 }}>
+            <span><code>&8</code> Dark Gray</span><br />
+            <span><code>&9</code> Blue</span><br />
+            <span><code>&a</code> Green</span><br />
+            <span><code>&b</code> Aqua</span><br />
+            <span><code>&c</code> Red</span><br />
+            <span><code>&d</code> Light Purple</span><br />
+            <span><code>&e</code> Yellow</span><br />
+            <span><code>&f</code> White</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Formatting Codes</h3>
+      <table className="wiki-table">
+        <thead><tr><th>Code</th><th>Effect</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td><code>&l</code></td><td>Bold</td><td><code>&c&l</code> = Bold Red</td></tr>
+          <tr><td><code>&o</code></td><td>Italic</td><td><code>&d&o</code> = Italic Pink</td></tr>
+          <tr><td><code>&n</code></td><td>Underline</td><td><code>&b&n</code> = Underlined Aqua</td></tr>
+          <tr><td><code>&m</code></td><td>Strikethrough</td><td><code>&7&m</code> = Strikethrough Gray</td></tr>
+          <tr><td><code>&k</code></td><td>Obfuscated</td><td>Magic/glitchy text</td></tr>
+          <tr><td><code>&r</code></td><td>Reset</td><td>Resets all formatting</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Hex Colors & Gradients</h3>
+      <p>For custom colors beyond the 16 basic ones, use hex color codes:</p>
+      <div className="cmd-list">
+        <div className="cmd-row"><code>#ff0000</code><span className="cmd-desc">Red</span></div>
+        <div className="cmd-row"><code>#00ff00</code><span className="cmd-desc">Green</span></div>
+        <div className="cmd-row"><code>#0000ff</code><span className="cmd-desc">Blue</span></div>
+        <div className="cmd-row"><code>#ff8800</code><span className="cmd-desc">Orange</span></div>
+        <div className="cmd-row"><code>#8800ff</code><span className="cmd-desc">Purple</span></div>
+      </div>
+
+      <p>For smooth color transitions, use gradients:</p>
+      <div className="cmd-list">
+        <div className="cmd-row"><code>{'<gradient:#ff0000:#ffff00>Fire Sword</gradient>'}</code><span className="cmd-desc">Red to Yellow</span></div>
+        <div className="cmd-row"><code>{'<gradient:#0000ff:#00ffff>Ocean Blade</gradient>'}</code><span className="cmd-desc">Blue to Cyan</span></div>
+        <div className="cmd-row"><code>{'<gradient:#ff0000:#00ff00:#0000ff>Rainbow</gradient>'}</code><span className="cmd-desc">Multi-color</span></div>
+      </div>
+
+      <Callout type="info"><b>Bedrock players:</b> Gradients work on both Java and Bedrock, but Bedrock cannot display smooth transitions. You'll still see color changes, just not as smoothly as Java.</Callout>
+
+      <h2>Name Ideas</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Theme</th><th>Code</th></tr></thead>
+        <tbody>
+          <tr><td>Fire</td><td><code>{'<gradient:#ff0000:#ff8800:#ffff00>Fire Sword</gradient>'}</code></td></tr>
+          <tr><td>Ice</td><td><code>{'<gradient:#00ffff:#0000ff:#ffffff>Frost Blade</gradient>'}</code></td></tr>
+          <tr><td>Gold</td><td><code>{'<gradient:#ffff00:#ff8800>Golden Edge</gradient>'}</code></td></tr>
+          <tr><td>Epic</td><td><code>&5&l⚔ &d&lDRAGONSLAYER &5&l⚔</code></td></tr>
+          <tr><td>Cute</td><td><code>&d&o~ &fSnowball &d&o~</code></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Troubleshooting</h2>
+      <ul>
+        <li><b>Colors not showing?</b> — Make sure you're using <code>&</code> not <code>§</code>.</li>
+        <li><b>Typed wrong name?</b> — Just type a new name to replace it, or <code>##</code> to cancel.</li>
+        <li><b>"You must be holding an item!"</b> — Hold the item you want to rename (not the token!) before typing <code>@@</code>.</li>
+        <li><b>Token disappeared but item didn't rename?</b> — Make sure you held the correct item before confirming.</li>
+      </ul>
+    </>
+  );
+}

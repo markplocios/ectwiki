@@ -41,6 +41,7 @@ export const NAV = [
     { id: 'guides/dimensionlock', label: 'Dimension Lock' },
     { id: 'guides/deathpenalty', label: 'Death Penalty' },
     { id: 'guides/afkrewards', label: 'AFK Rewards' },
+    { id: 'guides/renametoken', label: 'Rename Token' },
   ]},
   { id: 'faq', label: 'FAQ' },
 ];

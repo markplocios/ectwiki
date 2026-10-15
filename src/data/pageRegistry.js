@@ -8,7 +8,7 @@ import Trials from '../pages/Trials';
 import Commands from '../pages/Commands';
 import Tips from '../pages/Tips';
 import { Looloonah, Scout, Haven, Anika, Enchanter, Decipherer, TaskMaster, AstroTommy } from '../pages/Npcs';
-import { Waystones, Rtp, Claims, Teams, Selling, Island, ChestShop, DimensionLock, DeathPenalty, AfkRewards } from '../pages/Guides';
+import { Waystones, Rtp, Claims, Teams, Selling, Island, ChestShop, DimensionLock, DeathPenalty, AfkRewards, RenameToken } from '../pages/Guides';
 import Faq from '../pages/Faq';
 
 const PAGES = {
@@ -47,6 +47,7 @@ const PAGES = {
   'guides/dimensionlock': DimensionLock,
   'guides/deathpenalty': DeathPenalty,
   'guides/afkrewards': AfkRewards,
+  'guides/renametoken': RenameToken,
   faq: Faq,
 };
 
