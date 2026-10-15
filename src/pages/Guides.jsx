@@ -492,13 +492,28 @@ export function AfkRewards() {
 }
 
 export function RenameToken() {
+  const gradientText = (colors, text, style = {}) => {
+    const chars = text.split('');
+    return chars.map((char, i) => {
+      const p = chars.length > 1 ? i / (chars.length - 1) : 0;
+      const sc = colors.length - 1;
+      const s = Math.min(Math.floor(p * sc), sc - 1);
+      const t = p * sc - s;
+      const c1 = colors[s], c2 = colors[s + 1];
+      const r = Math.round(parseInt(c1.slice(1,3),16)*(1-t)+parseInt(c2.slice(1,3),16)*t);
+      const g = Math.round(parseInt(c1.slice(3,5),16)*(1-t)+parseInt(c2.slice(3,5),16)*t);
+      const b = Math.round(parseInt(c1.slice(5,7),16)*(1-t)+parseInt(c2.slice(5,7),16)*t);
+      return <span key={i} style={{ color: `rgb(${r},${g},${b})`, ...style }}>{char}</span>;
+    });
+  };
+
   return (
     <>
       <h1>Rename Token</h1>
       <p className="page-desc">Rename any item with full color and formatting support. Use color codes, hex colors, and gradients to create unique item names.</p>
 
       <h2>How to Get a Rename Token</h2>
-      <p>Rename Tokens can be obtained through <b>Premium Ranks</b> or the <b>rotating shop</b> when available.</p>
+      <p>Rename Tokens are currently only available from <b>server admins</b> or through <b>special events</b>.</p>
 
       <h2>How to Use</h2>
       <h3>Method 1: Interactive Mode (Recommended)</h3>
@@ -562,45 +577,45 @@ export function RenameToken() {
 
       <h3>Formatting Codes</h3>
       <table className="wiki-table">
-        <thead><tr><th>Code</th><th>Effect</th><th>Example</th></tr></thead>
+        <thead><tr><th>Code</th><th>Effect</th><th>Usage</th><th>Result</th></tr></thead>
         <tbody>
-          <tr><td><code>&l</code></td><td>Bold</td><td><code>&c&l</code> = Bold Red</td></tr>
-          <tr><td><code>&o</code></td><td>Italic</td><td><code>&d&o</code> = Italic Pink</td></tr>
-          <tr><td><code>&n</code></td><td>Underline</td><td><code>&b&n</code> = Underlined Aqua</td></tr>
-          <tr><td><code>&m</code></td><td>Strikethrough</td><td><code>&7&m</code> = Strikethrough Gray</td></tr>
-          <tr><td><code>&k</code></td><td>Obfuscated</td><td>Magic/glitchy text</td></tr>
-          <tr><td><code>&r</code></td><td>Reset</td><td>Resets all formatting</td></tr>
+          <tr><td><code>&l</code></td><td>Bold</td><td><code>&c&l</code></td><td><span style={{ color: '#FF5555', fontWeight: 'bold' }}>Bold Red</span></td></tr>
+          <tr><td><code>&o</code></td><td>Italic</td><td><code>&d&o</code></td><td><span style={{ color: '#FF55FF', fontStyle: 'italic' }}>Italic Pink</span></td></tr>
+          <tr><td><code>&n</code></td><td>Underline</td><td><code>&b&n</code></td><td><span style={{ color: '#55FFFF', textDecoration: 'underline' }}>Underlined Aqua</span></td></tr>
+          <tr><td><code>&m</code></td><td>Strikethrough</td><td><code>&7&m</code></td><td><span style={{ color: '#AAAAAA', textDecoration: 'line-through' }}>Strikethrough Gray</span></td></tr>
+          <tr><td><code>&k</code></td><td>Obfuscated</td><td><code>&k</code></td><td><span style={{ color: '#55FF55', letterSpacing: 2 }}>▓▒░█▓▒</span></td></tr>
+          <tr><td><code>&r</code></td><td>Reset</td><td><code>&r</code></td><td>Resets all formatting</td></tr>
         </tbody>
       </table>
 
       <h3>Hex Colors & Gradients</h3>
       <p>For custom colors beyond the 16 basic ones, use hex color codes:</p>
       <div className="cmd-list">
-        <div className="cmd-row"><code>#ff0000</code><span className="cmd-desc">Red</span></div>
-        <div className="cmd-row"><code>#00ff00</code><span className="cmd-desc">Green</span></div>
-        <div className="cmd-row"><code>#0000ff</code><span className="cmd-desc">Blue</span></div>
-        <div className="cmd-row"><code>#ff8800</code><span className="cmd-desc">Orange</span></div>
-        <div className="cmd-row"><code>#8800ff</code><span className="cmd-desc">Purple</span></div>
+        <div className="cmd-row"><code>#ff0000</code><span className="cmd-desc"><span style={{ color: '#ff0000', fontWeight: 'bold' }}>■</span> Red</span></div>
+        <div className="cmd-row"><code>#00ff00</code><span className="cmd-desc"><span style={{ color: '#00ff00', fontWeight: 'bold' }}>■</span> Green</span></div>
+        <div className="cmd-row"><code>#0000ff</code><span className="cmd-desc"><span style={{ color: '#0000ff', fontWeight: 'bold' }}>■</span> Blue</span></div>
+        <div className="cmd-row"><code>#ff8800</code><span className="cmd-desc"><span style={{ color: '#ff8800', fontWeight: 'bold' }}>■</span> Orange</span></div>
+        <div className="cmd-row"><code>#8800ff</code><span className="cmd-desc"><span style={{ color: '#8800ff', fontWeight: 'bold' }}>■</span> Purple</span></div>
       </div>
 
       <p>For smooth color transitions, use gradients:</p>
       <div className="cmd-list">
-        <div className="cmd-row"><code>{'<gradient:#ff0000:#ffff00>Fire Sword</gradient>'}</code><span className="cmd-desc">Red to Yellow</span></div>
-        <div className="cmd-row"><code>{'<gradient:#0000ff:#00ffff>Ocean Blade</gradient>'}</code><span className="cmd-desc">Blue to Cyan</span></div>
-        <div className="cmd-row"><code>{'<gradient:#ff0000:#00ff00:#0000ff>Rainbow</gradient>'}</code><span className="cmd-desc">Multi-color</span></div>
+        <div className="cmd-row"><code>{'<gradient:#ff0000:#ffff00>Fire Sword</gradient>'}</code><span className="cmd-desc">{gradientText(['#ff0000','#ffff00'], 'Fire Sword', { fontWeight: 'bold' })}</span></div>
+        <div className="cmd-row"><code>{'<gradient:#0000ff:#00ffff>Ocean Blade</gradient>'}</code><span className="cmd-desc">{gradientText(['#0000ff','#00ffff'], 'Ocean Blade', { fontWeight: 'bold' })}</span></div>
+        <div className="cmd-row"><code>{'<gradient:#ff0000:#00ff00:#0000ff>Rainbow</gradient>'}</code><span className="cmd-desc">{gradientText(['#ff0000','#00ff00','#0000ff'], 'Rainbow', { fontWeight: 'bold' })}</span></div>
       </div>
 
-      <Callout type="info"><b>Bedrock players:</b> Gradients work on both Java and Bedrock, but Bedrock cannot display smooth transitions. You'll still see color changes, just not as smoothly as Java.</Callout>
+      <Callout type="info"><b>Bedrock players:</b> Gradients work on both Java and Bedrock, but Bedrock cannot display smooth transitions. You'll still see color changes, just not as smoothly as Java. Some emojis also work on Bedrock — try them out yourself!</Callout>
 
       <h2>Name Ideas</h2>
       <table className="wiki-table">
-        <thead><tr><th>Theme</th><th>Code</th></tr></thead>
+        <thead><tr><th>Theme</th><th>Code</th><th>Result</th></tr></thead>
         <tbody>
-          <tr><td>Fire</td><td><code>{'<gradient:#ff0000:#ff8800:#ffff00>Fire Sword</gradient>'}</code></td></tr>
-          <tr><td>Ice</td><td><code>{'<gradient:#00ffff:#0000ff:#ffffff>Frost Blade</gradient>'}</code></td></tr>
-          <tr><td>Gold</td><td><code>{'<gradient:#ffff00:#ff8800>Golden Edge</gradient>'}</code></td></tr>
-          <tr><td>Epic</td><td><code>&5&l⚔ &d&lDRAGONSLAYER &5&l⚔</code></td></tr>
-          <tr><td>Cute</td><td><code>&d&o~ &fSnowball &d&o~</code></td></tr>
+          <tr><td>Fire</td><td><code>{'<gradient:#ff0000:#ff8800:#ffff00>Fire Sword</gradient>'}</code></td><td>{gradientText(['#ff0000','#ff8800','#ffff00'], 'Fire Sword', { fontWeight: 'bold' })}</td></tr>
+          <tr><td>Ice</td><td><code>{'<gradient:#00ffff:#0000ff:#ffffff>Frost Blade</gradient>'}</code></td><td>{gradientText(['#00ffff','#0000ff','#ffffff'], 'Frost Blade', { fontWeight: 'bold' })}</td></tr>
+          <tr><td>Gold</td><td><code>{'<gradient:#ffff00:#ff8800>Golden Edge</gradient>'}</code></td><td>{gradientText(['#ffff00','#ff8800'], 'Golden Edge', { fontWeight: 'bold' })}</td></tr>
+          <tr><td>Epic</td><td><code>&5&l⚔ &d&lDRAGONSLAYER &5&l⚔</code></td><td><span><span style={{ color: '#AA00AA', fontWeight: 'bold' }}>⚔ </span><span style={{ color: '#FF55FF', fontWeight: 'bold' }}>DRAGONSLAYER</span><span style={{ color: '#AA00AA', fontWeight: 'bold' }}> ⚔</span></span></td></tr>
+          <tr><td>Cute</td><td><code>&d&o~ &fSnowball &d&o~</code></td><td><span><span style={{ color: '#FF55FF', fontStyle: 'italic' }}>~ </span><span style={{ color: '#FFFFFF' }}>Snowball</span><span style={{ color: '#FF55FF', fontStyle: 'italic' }}> ~</span></span></td></tr>
         </tbody>
       </table>
 
