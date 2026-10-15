@@ -1,5 +1,13 @@
 import Callout from '../components/Callout';
 import { CheckIcon, CrossIcon } from '../components/Icons';
+import frontierLandscape from '../assets/frontier-landscape.jpg';
+import frontierStruct1 from '../assets/frontier-structure-1.jpg';
+import frontierStruct2 from '../assets/frontier-structure-2.jpg';
+import frontierStruct3 from '../assets/frontier-structure-3.jpg';
+import frontierStruct4 from '../assets/frontier-structure-4.jpg';
+import frontierStruct5 from '../assets/frontier-structure-5.jpg';
+import frontierStruct6 from '../assets/frontier-structure-6.jpg';
+import frontierShrineBoss from '../assets/frontier-shrine-boss.png';
 
 export function Town() {
   return (
@@ -63,6 +71,8 @@ export function Frontier() {
       <h1>Frontier</h1>
       <p className="page-desc">The dangerous open world — PvP enabled, items drop on death, gold is lost.</p>
 
+      <img src={frontierLandscape} alt="Frontier landscape" style={{ width: '100%', borderRadius: 8, marginBottom: 16 }} />
+
       <h2>Overview</h2>
       <p>The Frontier is where the real challenge lives. Custom structures, dungeons, and per-player loot chests are scattered throughout. Other players can and will kill you.</p>
 
@@ -76,8 +86,21 @@ export function Frontier() {
 
       <Callout type="danger"><b>Warning:</b> Everything is fair game in the Frontier except cheating. Bank your gold before entering — the death penalty takes from your wallet.</Callout>
 
-      <h2>Loot & Structures</h2>
+      <h2>Custom Structures</h2>
       <p>Custom structures generate throughout the Frontier with loot chests. Every chest is <b>per-player</b> — no one can steal your loot chest contents. Dungeons and boss spawns also appear here.</p>
+
+      <div className="card-grid cols-3">
+        <div className="card"><img src={frontierStruct1} alt="Dungeon mine shaft" style={{ width: '100%', borderRadius: 6 }} /></div>
+        <div className="card"><img src={frontierStruct2} alt="Underground ruins" style={{ width: '100%', borderRadius: 6 }} /></div>
+        <div className="card"><img src={frontierStruct3} alt="Dungeon interior" style={{ width: '100%', borderRadius: 6 }} /></div>
+        <div className="card"><img src={frontierStruct4} alt="Castle hall" style={{ width: '100%', borderRadius: 6 }} /></div>
+        <div className="card"><img src={frontierStruct5} alt="Windmill structure" style={{ width: '100%', borderRadius: 6 }} /></div>
+        <div className="card"><img src={frontierStruct6} alt="Mountain fortress" style={{ width: '100%', borderRadius: 6 }} /></div>
+      </div>
+
+      <h2>Shrine Bosses</h2>
+      <p>Hidden shrines contain powerful bosses that guard valuable loot. Defeat them for rare rewards.</p>
+      <img src={frontierShrineBoss} alt="The Ancient Ward shrine boss" style={{ maxWidth: 400, borderRadius: 8, marginBottom: 16 }} />
 
       <h2>Spawners</h2>
       <p>Spawners can only be mined and placed in the Frontier (Overworld, Nether, and End). In Elysium, breaking a spawner destroys it but rewards you with coins and buffs.</p>
