@@ -18,18 +18,24 @@ export function Waystones() {
       <ol>
         <li>Craft or obtain a <b>Lodestone</b> (requires netherite ingot + chiseled stone bricks).</li>
         <li>Place the lodestone where you want your waystone.</li>
-        <li>Right-click the lodestone to register it as a waystone.</li>
-        <li>Give it a unique name — duplicate names are not allowed.</li>
+        <li>Get a <b>Compass</b> and <b>rename it</b> on an anvil — the name you give the compass will become the name of the waystone.</li>
+        <li>Hold the renamed compass and <b>right-click the lodestone</b> to register it as a waystone.</li>
       </ol>
 
-      <Callout type="warn"><b>Important:</b> Each waystone must have a unique name. If someone already used that name, you'll get an error and need to pick a different one.</Callout>
+      <Callout type="warn"><b>Important:</b> Choose your compass name carefully — it becomes the waystone name and must be unique. If someone already used that name, you'll get an error and need to rename the compass to something different.</Callout>
+
+      <Callout type="tip"><b>Tip:</b> Name your compass something descriptive like "My Base" or "Iron Farm" before right-clicking the lodestone. You cannot change the waystone name after it's created.</Callout>
 
       <h2>How to Use a Waystone</h2>
       <ol>
-        <li>Walk up to any waystone and <b>right-click</b> it.</li>
-        <li>A menu will appear showing all discovered waystones you can travel to.</li>
-        <li>Select your destination.</li>
+        <li>Walk up to any waystone and <b>right-click</b> it to activate it.</li>
+        <li>A menu will appear showing all waystones you have activated.</li>
+        <li>Select your destination to teleport there.</li>
       </ol>
+      <p>Waystones are <b>shared</b> — any player can activate and use a waystone created by another player. Once you right-click a waystone for the first time, it gets added to your travel list.</p>
+
+      <h2>Removing a Waystone</h2>
+      <p>To remove a waystone, <b>sneak (hold shift) and mine</b> the lodestone. You cannot break it by mining normally — this prevents accidental removal.</p>
 
       <h2>Travel Cost</h2>
       <table className="wiki-table">
