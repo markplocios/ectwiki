@@ -1,4 +1,5 @@
 import Callout from '../components/Callout';
+import { CheckIcon, CrossIcon } from '../components/Icons';
 import shopBuySell from '../assets/shop-buy-sell.png';
 import shopBackArrow from '../assets/shop-back-arrow.png';
 import shopSellAll from '../assets/shop-sell-all.png';
@@ -355,6 +356,137 @@ export function ChestShop() {
           allowFullScreen
         />
       </div>
+    </>
+  );
+}
+
+export function DimensionLock() {
+  return (
+    <>
+      <h1>Dimension Lock System</h1>
+      <p className="page-desc">This system controls access to Nether and End dimensions. It blocks portals, teleportation, warps, homes, and more for players without permission.</p>
+
+      <h2>How It Works</h2>
+      <p>Each dimension (Nether and End) can be locked individually. When a dimension is locked, only players with the required permission can enter. All teleportation methods are blocked — including portals, warps, homes, and commands.</p>
+
+      <Callout type="info"><b>Rank-based access:</b> You unlock dimensions by progressing through the rank system. Higher ranks grant access to more dimensions. Check the <a href="#ranks/overview" style={{ color: 'var(--gold)', fontWeight: 600 }}>Rank Progression</a> page for details.</Callout>
+
+      <h2>Player Commands</h2>
+      <div className="cmd-list">
+        <div className="cmd-row"><code>/dimcheck</code><span className="cmd-desc">Check which dimensions you can access</span></div>
+        <div className="cmd-row"><code>/dimcheck help</code><span className="cmd-desc">Shows help menu and access symbols</span></div>
+      </div>
+
+      <h3>Access Symbols</h3>
+      <table className="wiki-table">
+        <thead><tr><th>Symbol</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td><span style={{ color: 'var(--green)', fontWeight: 700 }}>&#10004;</span></td><td>You <b>can</b> enter this dimension</td></tr>
+          <tr><td><span style={{ color: 'var(--red)', fontWeight: 700 }}>&#10008;</span></td><td>You <b>cannot</b> enter this dimension</td></tr>
+        </tbody>
+      </table>
+
+      <Callout type="warn"><b>Note:</b> Sometimes, admins may lock a dimension entirely if necessary — even players with access permissions will be temporarily blocked until it is unlocked again.</Callout>
+    </>
+  );
+}
+
+export function DeathPenalty() {
+  return (
+    <>
+      <h1>Death Penalty System</h1>
+      <p className="page-desc">Dying isn't free. Stay alive, protect your wallet. When you die, the server takes a portion of your coins as a death penalty — the richer you are, the higher the cost.</p>
+
+      <h2>How It Works</h2>
+      <ul>
+        <li>You must have <b>1,000+ coins</b> in your wallet to be penalized. Below 1,000 = no penalty.</li>
+        <li><b>Base rate:</b> 5% when you have 1,000+ coins.</li>
+        <li><b>+1%</b> for every 20,000 coins you have.</li>
+        <li><b>Maximum:</b> 30% (caps at 500,000+ coins).</li>
+        <li><b>Bank deposits are safe</b> — only your wallet is affected.</li>
+      </ul>
+
+      <h2>Penalty Breakdown by Balance</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Wallet Balance</th><th>Penalty Rate</th><th>Example Loss</th></tr></thead>
+        <tbody>
+          <tr><td>Below 1,000</td><td><span className="badge green">0%</span></td><td>Nothing</td></tr>
+          <tr><td>1,000 – 19,999</td><td>5%</td><td>500 on 10,000</td></tr>
+          <tr><td>20,000 – 39,999</td><td>6%</td><td>1,800 on 30,000</td></tr>
+          <tr><td>40,000 – 59,999</td><td>7%</td><td>3,500 on 50,000</td></tr>
+          <tr><td>60,000 – 79,999</td><td>8%</td><td>5,600 on 70,000</td></tr>
+          <tr><td>80,000 – 99,999</td><td>9%</td><td>8,100 on 90,000</td></tr>
+          <tr><td>100,000 – 119,999</td><td>10%</td><td>10,000 on 100,000</td></tr>
+          <tr><td>...</td><td>...</td><td>+1% per 20,000</td></tr>
+          <tr><td>500,000+</td><td><span className="badge red">30% (MAX)</span></td><td>180,000 on 600,000</td></tr>
+        </tbody>
+      </table>
+
+      <Callout type="danger"><b>Warning:</b> Once you hit 500,000+ coins, you're at maximum risk. Every death costs nearly a third of your fortune!</Callout>
+
+      <h2>Commands</h2>
+      <div className="cmd-list">
+        <div className="cmd-row"><code>/dpstatus</code><span className="cmd-desc">Check if the system is on, your balance, penalty rate, and full tier breakdown</span></div>
+        <div className="cmd-row"><code>/dpcalc &lt;amount&gt;</code><span className="cmd-desc">Calculate what you'd lose at any balance (e.g. <code>/dpcalc 50000</code> shows 3,500 loss at 7%)</span></div>
+        <div className="cmd-row"><code>/dpimmunity &lt;hrs&gt;</code><span className="cmd-desc">Buy temporary immunity (10,000 coins/hr)</span></div>
+      </div>
+
+      <h2>Survival Tips</h2>
+      <ul>
+        <li>Keep your wallet under <b>1,000 coins</b> and deposit everything in the <a href="#npcs/anika" style={{ color: 'var(--gold)' }}>Bank</a> — no penalty if your wallet is below the threshold.</li>
+        <li>Use <code>/dpstatus</code> to check your current penalty rate before risky adventures.</li>
+        <li>Use <code>/dpcalc</code> to preview your potential loss before heading into danger.</li>
+        <li>Deposit your coins before entering dungeons, the Frontier, or fighting bosses.</li>
+        <li>Keep armor repaired — don't die from preventable damage.</li>
+        <li>Consider buying <b>temporary immunity</b> with <code>/dpimmunity</code> for dangerous runs.</li>
+      </ul>
+
+      <Callout type="tip"><b>Permanent bypass:</b> You can buy a permanent Death Penalty Bypass from the <a href="#npcs/astrotommy" style={{ color: 'var(--gold)', fontWeight: 600 }}>Stardust Store (AstroTommy)</a> for <b>200,000 Stardust</b>. Once purchased, you'll never lose coins on death again.</Callout>
+    </>
+  );
+}
+
+export function AfkRewards() {
+  return (
+    <>
+      <h1>AFK Reward System</h1>
+      <p className="page-desc">Earn coins even when you're away from your keyboard. The longer you stay online, the more you earn.</p>
+
+      <h2>How It Works</h2>
+      <p>When you go AFK, you automatically earn <b>1 coin per minute</b> just for being online. After <b>5 minutes</b> of no activity, you'll be marked as AFK automatically — or you can toggle it manually.</p>
+
+      <h2>Commands</h2>
+      <div className="cmd-list">
+        <div className="cmd-row"><code>/afk</code><span className="cmd-desc">Toggle AFK mode manually — use it again to return</span></div>
+        <div className="cmd-row"><code>/checkafk</code><span className="cmd-desc">Check your current AFK status</span></div>
+      </div>
+
+      <h2>Auto-AFK Detection</h2>
+      <p>After <b>5 minutes</b> of no activity, the system automatically marks you as AFK. Activity includes:</p>
+      <ul>
+        <li>Chatting or using commands</li>
+        <li>Moving your character</li>
+        <li>Opening inventories or clicking items</li>
+      </ul>
+      <p>You'll automatically return from AFK when you perform any of these actions. The server announces when you go AFK and when you return.</p>
+
+      <h2>VIP Multipliers</h2>
+      <p>Higher ranks earn more per minute through AFK multipliers:</p>
+      <table className="wiki-table">
+        <thead><tr><th>Multiplier</th><th>Earnings/Min</th><th>Per Hour</th></tr></thead>
+        <tbody>
+          <tr><td>1x (default)</td><td>1 coin</td><td>60 coins</td></tr>
+          <tr><td>1.5x</td><td>1.5 coins</td><td>90 coins</td></tr>
+          <tr><td>2x</td><td>2 coins</td><td>120 coins</td></tr>
+          <tr><td>3x</td><td>3 coins</td><td>180 coins</td></tr>
+          <tr><td>5x</td><td>5 coins</td><td>300 coins</td></tr>
+          <tr><td>10x</td><td>10 coins</td><td>600 coins</td></tr>
+        </tbody>
+      </table>
+
+      <Callout type="tip"><b>Tip:</b> Use <code>/afk</code> before stepping away to start earning immediately. Build an AFK area at your base and let the coins roll in while you're away.</Callout>
+
+      <Callout type="info"><b>Note:</b> You must be AFK for at least 1 minute before rewards start. All earnings are added directly to your wallet balance.</Callout>
     </>
   );
 }

@@ -38,6 +38,9 @@ export const NAV = [
     { id: 'guides/selling', label: 'Buying & Selling' },
     { id: 'guides/island', label: 'Sky Islands' },
     { id: 'guides/chestshop', label: 'Chest Shops' },
+    { id: 'guides/dimensionlock', label: 'Dimension Lock' },
+    { id: 'guides/deathpenalty', label: 'Death Penalty' },
+    { id: 'guides/afkrewards', label: 'AFK Rewards' },
   ]},
   { id: 'faq', label: 'FAQ' },
 ];
