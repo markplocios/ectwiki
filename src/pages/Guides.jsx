@@ -696,9 +696,7 @@ export function Dungeons() {
 
       <h2>Party Commands</h2>
       <div className="cmd-list">
-        <div className="cmd-row"><code>/party invite &lt;player&gt;</code><span className="cmd-desc">Invite a player to your party</span></div>
-        <div className="cmd-row"><code>/party</code><span className="cmd-desc">View your party info</span></div>
-        <div className="cmd-row"><code>/recruit</code><span className="cmd-desc">Create a public listing so others can join your party</span></div>
+        <div className="cmd-row"><code>/recruit</code><span className="cmd-desc">Create a public party listing for a dungeon run</span></div>
       </div>
 
       <h2>Rewards</h2>
@@ -743,9 +741,7 @@ export function Recruit() {
 
       <h2>Commands</h2>
       <div className="cmd-list">
-        <div className="cmd-row"><code>/recruit</code><span className="cmd-desc">Open the recruitment board or create a listing for your party</span></div>
-        <div className="cmd-row"><code>/party invite &lt;player&gt;</code><span className="cmd-desc">Invite a specific player to your party</span></div>
-        <div className="cmd-row"><code>/party</code><span className="cmd-desc">View your current party members</span></div>
+        <div className="cmd-row"><code>/recruit</code><span className="cmd-desc">Create a public party listing — all online players see it and can join</span></div>
       </div>
 
       <h2>Step-by-Step: Joining a Dungeon Run</h2>
