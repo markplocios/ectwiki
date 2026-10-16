@@ -833,9 +833,9 @@ export function LuckyBlock() {
       <table className="wiki-table">
         <thead><tr><th>Category</th><th>Chance</th><th>Outcomes</th></tr></thead>
         <tbody>
-          <tr><td><span style={{ color: '#FFAA00', fontWeight: 700 }}>Legendary</span></td><td>0.002%</td><td>3 rewards</td></tr>
-          <tr><td><span style={{ color: '#AA00AA', fontWeight: 700 }}>Epic</span></td><td>3%</td><td>7 rewards</td></tr>
-          <tr><td><span style={{ color: '#5555FF', fontWeight: 700 }}>Rare</span></td><td>6%</td><td>6 rewards</td></tr>
+          <tr><td><span style={{ color: '#FFAA00', fontWeight: 700 }}>Legendary</span></td><td>0.002%</td><td>5 rewards</td></tr>
+          <tr><td><span style={{ color: '#AA00AA', fontWeight: 700 }}>Epic</span></td><td>3%</td><td>8 rewards</td></tr>
+          <tr><td><span style={{ color: '#5555FF', fontWeight: 700 }}>Rare</span></td><td>6%</td><td>7 rewards</td></tr>
           <tr><td><span style={{ color: '#55FF55', fontWeight: 700 }}>Common</span></td><td>12%</td><td>12 rewards</td></tr>
           <tr><td><span style={{ color: '#55FFFF', fontWeight: 700 }}>Blessed (Buffs)</span></td><td>14%</td><td>5 buffs</td></tr>
           <tr><td><span style={{ color: '#FF5555', fontWeight: 700 }}>Unlucky (Debuffs)</span></td><td>22%</td><td>8 debuffs</td></tr>
@@ -855,6 +855,8 @@ export function LuckyBlock() {
           <tr><td>Legendary Elemental Sword</td><td>Random element (Inferno, Glacial, Voltaic, Dusk, Dawn)</td></tr>
           <tr><td>Beacon</td><td>x1</td></tr>
           <tr><td>Nether Star</td><td>x1</td></tr>
+          <tr><td>Diamond Block</td><td>x1</td></tr>
+          <tr><td>Netherite Block</td><td>x1</td></tr>
         </tbody>
       </table>
 
@@ -869,6 +871,7 @@ export function LuckyBlock() {
           <tr><td>Dungeon Weapon</td><td>Random blade, bow, or wand</td></tr>
           <tr><td>Legendary Tome</td><td>x1</td></tr>
           <tr><td>Rare Tome</td><td>1-2x</td></tr>
+          <tr><td>Netherite Ingot</td><td>1-2x</td></tr>
         </tbody>
       </table>
 
@@ -882,6 +885,7 @@ export function LuckyBlock() {
           <tr><td>Rare Elemental Sword</td><td>Random element</td></tr>
           <tr><td>Common Tome</td><td>1-2x</td></tr>
           <tr><td>Diamonds</td><td>8x</td></tr>
+          <tr><td>Ancient Debris</td><td>2-4x</td></tr>
         </tbody>
       </table>
 
