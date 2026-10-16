@@ -4,6 +4,11 @@ import shopBuySell from '../assets/shop-buy-sell.png';
 import shopBackArrow from '../assets/shop-back-arrow.png';
 import shopSellAll from '../assets/shop-sell-all.png';
 import shopSellGui from '../assets/shop-sell-gui.png';
+import shopBulkBuyJava from '../assets/shop-bulk-buy-java.png';
+import shopBedrockList from '../assets/shop-bedrock-list.jpeg';
+import shopBedrockInfo from '../assets/shop-bedrock-info.jpeg';
+import shopBedrockAmount from '../assets/shop-bedrock-amount.jpeg';
+import shopBedrockConfirm from '../assets/shop-bedrock-confirm.jpeg';
 
 export function Waystones() {
   return (
@@ -145,7 +150,9 @@ export function Selling() {
       <h1>Buying & Selling Items</h1>
       <p className="page-desc">How to buy and sell items at the NPC shops in Town.</p>
 
-      <h2>Buying & Selling (Java)</h2>
+      <h2>Java Edition</h2>
+
+      <h3>Basic Buy & Sell</h3>
       <p>Visit any <b>Shop NPC in Town</b> to open the shop GUI. Each item shows its buy and sell price.</p>
       <ul>
         <li><b>Left-click</b> an item to <b>buy</b> it.</li>
@@ -155,22 +162,35 @@ export function Selling() {
         <img src={shopBuySell} alt="Shop GUI showing buy and sell prices" />
       </div>
 
-      <h2>Bulk Selling (Sell All Method)</h2>
-      <p>Some players — especially <b>Bedrock players</b> — have a hard time selling items one by one. The Sell All method lets you dump everything at once.</p>
+      <h3>Bulk Buying & Selling</h3>
+      <p><b>Shift + Left-click</b> any item to open the <b>Choose Amount</b> menu. Use the green wool buttons to add to your quantity:</p>
+      <ul>
+        <li><b>+1</b>, <b>+16</b>, or <b>+32</b> — click to increase the amount.</li>
+        <li><b>-1</b> or <b>-16</b> — click to decrease the amount.</li>
+        <li>Once you've set the amount, click <b>Confirm Purchase</b> or <b>Confirm Sale</b>.</li>
+      </ul>
+      <div className="npc-portrait">
+        <img src={shopBulkBuyJava} alt="Choose Amount menu with +32 button" />
+      </div>
 
-      <h3>Step 1: Go Back to the Main Menu</h3>
+      <Callout type="tip"><b>Tip:</b> Use Shift + Left-click to buy or sell in bulk. For example, click +32 twice to buy 64 items at once instead of clicking one by one.</Callout>
+
+      <h3>Sell All (Java)</h3>
+      <p>The <b>Sell All</b> feature lets you dump multiple items at once to sell them all in one go.</p>
+
+      <h4>Step 1: Go Back to the Main Menu</h4>
       <p>From any shop category, click the <b>arrow icon</b> to go back to the main Server Market menu.</p>
       <div className="npc-portrait">
         <img src={shopBackArrow} alt="Click the arrow to go back" />
       </div>
 
-      <h3>Step 2: Click Sell All</h3>
+      <h4>Step 2: Click Sell All</h4>
       <p>In the Server Market menu, find the <b>Sell All</b> button (chest icon). Click it to open the bulk sell GUI.</p>
       <div className="npc-portrait">
         <img src={shopSellAll} alt="Sell All button in Server Market" />
       </div>
 
-      <h3>Step 3: Place Your Items</h3>
+      <h4>Step 3: Place Your Items</h4>
       <p>A blank grid will open. Place all the items you want to sell into this grid.</p>
       <div className="npc-portrait">
         <img src={shopSellGui} alt="Sell All GUI — place items here" />
@@ -180,7 +200,40 @@ export function Selling() {
         <li>If an item is <b>not sellable</b>, it will be returned to your inventory — nothing is lost.</li>
       </ul>
 
-      <Callout type="tip"><b>Bedrock players:</b> This method is the fastest way to sell items. Just dump everything into the Sell All grid and close it — no need to right-click individual items.</Callout>
+      <h2>Bedrock Edition</h2>
+      <p>Bedrock players get a <b>native popup form</b> instead of the Java chest GUI. The experience is streamlined for touch and controller input.</p>
+
+      <h3>Step 1: Browse the Shop</h3>
+      <p>Talk to any <b>Shop NPC</b> to open the shop. You'll see a list of items with their buy and sell prices. Tap the item you want.</p>
+      <div className="npc-portrait">
+        <img src={shopBedrockList} alt="Bedrock shop list showing items and prices" />
+      </div>
+
+      <h3>Step 2: Choose an Action</h3>
+      <p>After selecting an item, a popup appears with four options:</p>
+      <ul>
+        <li><b>Buy</b> — Buy one of this item.</li>
+        <li><b>Sell</b> — Sell one of this item from your inventory.</li>
+        <li><b>Sell All</b> — Sell <b>all</b> of this item from your inventory at once.</li>
+        <li><b>Select Amount</b> — Choose a custom quantity to buy or sell.</li>
+      </ul>
+      <div className="npc-portrait">
+        <img src={shopBedrockInfo} alt="Bedrock product info with Buy, Sell, Sell All, and Select Amount buttons" />
+      </div>
+
+      <h3>Step 3: Bulk Buy or Sell</h3>
+      <p>Tap <b>Select Amount</b> to enter the quantity you want. Type a number (e.g. <code>64</code>) and tap <b>Submit</b>.</p>
+      <div className="npc-portrait">
+        <img src={shopBedrockAmount} alt="Bedrock amount selection popup" />
+      </div>
+
+      <h3>Step 4: Confirm</h3>
+      <p>The popup will update to show the total price for the quantity you selected. Tap <b>Buy</b> or <b>Sell</b> to confirm.</p>
+      <div className="npc-portrait">
+        <img src={shopBedrockConfirm} alt="Bedrock confirmation showing total price for 64 items" />
+      </div>
+
+      <Callout type="tip"><b>Bedrock players:</b> Use <b>Select Amount</b> to buy or sell in bulk. Type the number you want and submit — no need to click multiple times.</Callout>
 
       <h2>Sell Commands</h2>
       <div className="cmd-list">
