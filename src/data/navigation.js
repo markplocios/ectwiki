@@ -29,6 +29,7 @@ export const NAV = [
     { id: 'npcs/decipherer', label: 'Decipherer (Helix)' },
     { id: 'npcs/taskmaster', label: 'Task Master (Kazren)' },
     { id: 'npcs/astrotommy', label: 'Stardust Collector (AstroTommy)' },
+    { id: 'npcs/auctioneer', label: 'Auctioneer (Wayne)' },
   ]},
   { id: 'guides', label: 'Guides', children: [
     { id: 'guides/waystones', label: 'Waystones' },
@@ -45,7 +46,6 @@ export const NAV = [
     { id: 'guides/dungeons', label: 'Dungeons' },
     { id: 'guides/recruit', label: 'Party Recruitment' },
     { id: 'guides/luckyblock', label: 'Lucky Blocks' },
-    { id: 'guides/auctionhouse', label: 'Auction House' },
   ]},
   { id: 'help', label: 'Help', children: [
     { id: 'help/faq', label: 'FAQ' },

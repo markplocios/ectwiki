@@ -7,8 +7,8 @@ import { RanksOverview, PeasantTier, AdventurerTier, SquireTier, KnightTier, Eli
 import Trials from '../pages/Trials';
 import Commands from '../pages/Commands';
 import Tips from '../pages/Tips';
-import { Looloonah, Scout, Haven, Anika, Enchanter, Decipherer, TaskMaster, AstroTommy } from '../pages/Npcs';
-import { Waystones, Rtp, Claims, Teams, Selling, Island, ChestShop, DimensionLock, DeathPenalty, AfkRewards, RenameToken, Dungeons, Recruit, LuckyBlock, AuctionHouse } from '../pages/Guides';
+import { Looloonah, Scout, Haven, Anika, Enchanter, Decipherer, TaskMaster, AstroTommy, Auctioneer } from '../pages/Npcs';
+import { Waystones, Rtp, Claims, Teams, Selling, Island, ChestShop, DimensionLock, DeathPenalty, AfkRewards, RenameToken, Dungeons, Recruit, LuckyBlock } from '../pages/Guides';
 import Faq from '../pages/Faq';
 import Support from '../pages/Support';
 
@@ -52,7 +52,7 @@ const PAGES = {
   'guides/dungeons': Dungeons,
   'guides/recruit': Recruit,
   'guides/luckyblock': LuckyBlock,
-  'guides/auctionhouse': AuctionHouse,
+  'npcs/auctioneer': Auctioneer,
   'help/faq': Faq,
   'help/support': Support,
 };

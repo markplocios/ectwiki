@@ -8,6 +8,7 @@ import npcHaven from '../assets/npc-haven.png';
 import npcAnika from '../assets/npc-anika.png';
 import npcKazren from '../assets/npc-kazren.png';
 import npcHelix from '../assets/npc-helix.png';
+import npcWayne from '../assets/auction-npc.png';
 
 export function Looloonah() {
   return (
@@ -452,6 +453,55 @@ export function AstroTommy() {
       </table>
 
       <Callout type="tip"><b>Top Pick:</b> The <b>Death Penalty Bypass</b> is the most valuable item in the shop — once purchased, you'll never lose gold on death again. Start saving early!</Callout>
+    </>
+  );
+}
+
+export function Auctioneer() {
+  return (
+    <>
+      <h1>Auctioneer — Wayne Lars</h1>
+      <p className="page-desc">List items for sale and browse other players' listings through the Auction House.</p>
+
+      <div className="npc-portrait">
+        <img src={npcWayne} alt="Wayne Lars — Auction House NPC in Town" />
+      </div>
+
+      <h2>What is the Auction House?</h2>
+      <p>The Auction House is a player-driven marketplace where you can list items for sale and browse what other players are selling. Unlike NPC shops that have fixed prices, the Auction House lets you set your own price — sell rare loot for what it's actually worth.</p>
+
+      <h2>How to Browse</h2>
+      <p>To browse the Auction House, you must visit <b>Wayne Lars</b> in Town. Walk up to him and interact to open the Auction House GUI.</p>
+
+      <Callout type="warn"><b>Note:</b> You cannot open the browse GUI with <code>/ah</code> directly — you must use the NPC. This is to keep player trading as part of the Town experience.</Callout>
+
+      <h2>How to Sell</h2>
+      <p>Selling is simple — hold the item you want to sell in your <b>main hand</b> and use the command:</p>
+
+      <div className="cmd-list">
+        <div className="cmd-row"><code>/ah sell &lt;price&gt;</code><span className="cmd-desc">List the item in your main hand on the Auction House for the specified price</span></div>
+      </div>
+
+      <h3>Step by Step</h3>
+      <ol>
+        <li><b>Hold the item</b> you want to sell in your main hand.</li>
+        <li>Type <code>/ah sell &lt;price&gt;</code> — for example, <code>/ah sell 500</code> to list it for 500 coins.</li>
+        <li>The item is removed from your hand and listed on the Auction House.</li>
+        <li>When another player buys it, the coins go directly to your balance.</li>
+      </ol>
+
+      <Callout type="tip"><b>Tip:</b> Check what similar items are selling for before listing yours. Visit Wayne Lars to browse current listings and price your items competitively.</Callout>
+
+      <h2>Collecting Expired Items</h2>
+      <p>If your item doesn't sell before the listing expires, it won't be lost. Visit Wayne Lars to collect any unsold items from your expired listings.</p>
+
+      <h2>Tips for Sellers</h2>
+      <ul>
+        <li><b>Rare dungeon drops</b> and <b>custom materials</b> sell well — players will pay more than the NPC shop price.</li>
+        <li><b>Enchanted gear</b> and <b>custom weapons</b> are in high demand.</li>
+        <li>Don't overprice common items — check the market first.</li>
+        <li>You can have multiple items listed at the same time.</li>
+      </ul>
     </>
   );
 }
