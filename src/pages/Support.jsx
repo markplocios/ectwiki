@@ -28,12 +28,19 @@ export default function Support() {
       </a>
 
       <h2>How to Get Help</h2>
+      <h3>Community Channels</h3>
       <div className="cmd-list">
-        <div className="cmd-row"><code>#report</code><span className="cmd-desc">Report bugs, exploits, or rule-breaking players in the report channel</span></div>
-        <div className="cmd-row"><code>#create-ticket</code><span className="cmd-desc">Open a private support ticket for personal issues (lost items, account problems, etc.)</span></div>
+        <div className="cmd-row"><code>#support</code><span className="cmd-desc">Ask questions and get help from staff and the community</span></div>
+        <div className="cmd-row"><code>#report</code><span className="cmd-desc">Report bugs, exploits, or rule-breaking players</span></div>
+        <div className="cmd-row"><code>#suggestion</code><span className="cmd-desc">Suggest new features or improvements for the server</span></div>
       </div>
 
-      <Callout type="info"><b>For any concerns</b>, you may report them in our Discord report channel or create a support ticket. Our staff team will review and respond as soon as possible.</Callout>
+      <h3>Tickets</h3>
+      <div className="cmd-list">
+        <div className="cmd-row"><code>#ticket-support</code><span className="cmd-desc">Open a private support ticket for personal issues (lost items, account problems, appeals, etc.)</span></div>
+      </div>
+
+      <Callout type="info"><b>For any concerns</b>, you may report them in our Discord <b>#report</b> channel or create a ticket in <b>#ticket-support</b>. Our staff team will review and respond as soon as possible.</Callout>
 
       <h2>What to Include in a Report</h2>
       <ul>
