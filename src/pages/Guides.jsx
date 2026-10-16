@@ -9,6 +9,7 @@ import shopBedrockList from '../assets/shop-bedrock-list.jpeg';
 import shopBedrockInfo from '../assets/shop-bedrock-info.jpeg';
 import shopBedrockAmount from '../assets/shop-bedrock-amount.jpeg';
 import shopBedrockConfirm from '../assets/shop-bedrock-confirm.jpeg';
+import luckyBlockImg from '../assets/lucky-block.png';
 
 export function Waystones() {
   return (
@@ -802,6 +803,175 @@ export function Recruit() {
       <Callout type="tip"><b>Tip:</b> You don't need a full party to enter a dungeon. Even solo players can run dungeons — but having teammates makes boss fights much easier and more fun!</Callout>
 
       <Callout type="info"><b>Party XP:</b> When in a party, experience is split among members. Stick together for the best results.</Callout>
+    </>
+  );
+}
+
+export function LuckyBlock() {
+  return (
+    <>
+      <h1>Lucky Blocks</h1>
+      <p className="page-desc">Break a Lucky Block for a random reward — or a random punishment. High risk, high reward.</p>
+
+      <div className="npc-portrait">
+        <img src={luckyBlockImg} alt="Lucky Block" />
+      </div>
+
+      <h2>What is a Lucky Block?</h2>
+      <p>Lucky Blocks are special custom blocks that drop a <b>random outcome</b> when broken. You could get legendary weapons, rare materials, helpful buffs — or you could get poisoned, trapped in obsidian, or swarmed by mobs. Every break is a gamble.</p>
+
+      <h2>How to Break</h2>
+      <ul>
+        <li>Requires a <b>Diamond Pickaxe</b> or <b>Netherite Pickaxe</b> to mine.</li>
+        <li>Hardness is the same as obsidian — it takes time to break.</li>
+        <li>The block is <b>explosion-proof</b> — TNT won't destroy it.</li>
+      </ul>
+
+      <Callout type="warn"><b>Warning:</b> Lucky Blocks can spawn hostile mobs, TNT, lava, and other hazards. Break them in a safe area and be ready to fight or run!</Callout>
+
+      <h2>Drop Chances</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Category</th><th>Chance</th><th>Outcomes</th></tr></thead>
+        <tbody>
+          <tr><td><span style={{ color: '#FFAA00', fontWeight: 700 }}>Legendary</span></td><td>0.002%</td><td>3 rewards</td></tr>
+          <tr><td><span style={{ color: '#AA00AA', fontWeight: 700 }}>Epic</span></td><td>3%</td><td>7 rewards</td></tr>
+          <tr><td><span style={{ color: '#5555FF', fontWeight: 700 }}>Rare</span></td><td>6%</td><td>6 rewards</td></tr>
+          <tr><td><span style={{ color: '#55FF55', fontWeight: 700 }}>Common</span></td><td>12%</td><td>12 rewards</td></tr>
+          <tr><td><span style={{ color: '#55FFFF', fontWeight: 700 }}>Blessed (Buffs)</span></td><td>14%</td><td>5 buffs</td></tr>
+          <tr><td><span style={{ color: '#FF5555', fontWeight: 700 }}>Unlucky (Debuffs)</span></td><td>22%</td><td>8 debuffs</td></tr>
+          <tr><td><span style={{ color: '#FF5555', fontWeight: 700 }}>Environment Hazards</span></td><td>17%</td><td>6 hazards</td></tr>
+          <tr><td><span style={{ color: '#FF5555', fontWeight: 700 }}>Mob Spawns</span></td><td>17%</td><td>8 mob types</td></tr>
+          <tr><td><span style={{ color: '#FF55FF', fontWeight: 700 }}>Troll / Weird</span></td><td>9%</td><td>5 events</td></tr>
+        </tbody>
+      </table>
+
+      <Callout type="info"><b>Overall odds:</b> ~35% chance of something good, ~56% chance of something bad, and ~9% chance of something weird. Think twice before breaking one!</Callout>
+
+      <h2>Legendary Rewards (0.002%)</h2>
+      <p>Extremely rare. The entire server is notified when someone gets a Legendary drop.</p>
+      <table className="wiki-table">
+        <thead><tr><th>Reward</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Legendary Elemental Sword</td><td>Random element (Inferno, Glacial, Voltaic, Dusk, Dawn)</td></tr>
+          <tr><td>Beacon</td><td>x1</td></tr>
+          <tr><td>Nether Star</td><td>x1</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Epic Rewards (3%)</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Reward</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Mithril Ingot</td><td>3-5x</td></tr>
+          <tr><td>Raw Hextech</td><td>2-4x</td></tr>
+          <tr><td>Magic Essence</td><td>2-3x</td></tr>
+          <tr><td>Epic Elemental Sword</td><td>Random element</td></tr>
+          <tr><td>Dungeon Weapon</td><td>Random blade, bow, or wand</td></tr>
+          <tr><td>Legendary Tome</td><td>x1</td></tr>
+          <tr><td>Rare Tome</td><td>1-2x</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Rare Rewards (6%)</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Reward</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Raw Cobalt</td><td>5-10x</td></tr>
+          <tr><td>Steel Ingot</td><td>3-6x</td></tr>
+          <tr><td>Magic Fragment</td><td>4-8x</td></tr>
+          <tr><td>Rare Elemental Sword</td><td>Random element</td></tr>
+          <tr><td>Common Tome</td><td>1-2x</td></tr>
+          <tr><td>Diamonds</td><td>8x</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Common Rewards (12%)</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Reward</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Iron Ingots</td><td>32x</td></tr>
+          <tr><td>Gold Ingots</td><td>16x</td></tr>
+          <tr><td>Diamonds</td><td>4x</td></tr>
+          <tr><td>Emeralds</td><td>8x</td></tr>
+          <tr><td>Steak</td><td>32x</td></tr>
+          <tr><td>Golden Apples</td><td>16x</td></tr>
+          <tr><td>Experience</td><td>500 XP</td></tr>
+          <tr><td>Ender Pearl</td><td>1-4x</td></tr>
+          <tr><td>Ender Chest</td><td>x1</td></tr>
+          <tr><td>Sponges</td><td>4x</td></tr>
+          <tr><td>Enchanted Iron Pickaxe</td><td>Efficiency III</td></tr>
+          <tr><td>Enchanted Iron Sword</td><td>Sharpness II</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Blessed Buffs (14%)</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Buff</th><th>Duration</th></tr></thead>
+        <tbody>
+          <tr><td>Strength I + Resistance I</td><td>60 seconds</td></tr>
+          <tr><td>Haste II</td><td>90 seconds</td></tr>
+          <tr><td>Regeneration II + Absorption II</td><td>30s / 120s</td></tr>
+          <tr><td>Night Vision I + Speed I</td><td>300s / 120s</td></tr>
+          <tr><td>Fire Resistance + Water Breathing</td><td>180 seconds</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Unlucky Debuffs (22%)</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Debuff</th><th>Duration</th></tr></thead>
+        <tbody>
+          <tr><td>Slowness II</td><td>15 seconds</td></tr>
+          <tr><td>Poison I</td><td>10 seconds</td></tr>
+          <tr><td>Blindness I</td><td>8 seconds</td></tr>
+          <tr><td>Weakness II</td><td>20 seconds</td></tr>
+          <tr><td>Mining Fatigue II</td><td>15 seconds</td></tr>
+          <tr><td>Hunger III</td><td>10 seconds</td></tr>
+          <tr><td>Wither I + Slowness I</td><td>5s / 10s</td></tr>
+          <tr><td>Nausea I + Blindness I</td><td>10s / 5s</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Environment Hazards (17%)</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Hazard</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Obsidian Prison</td><td>3x3 cage around you. Mining Fatigue for 30s. Auto-frees after 15 seconds.</td></tr>
+          <tr><td>Anvil Rain</td><td>5 anvils fall from 20 blocks high. Deadly if hit!</td></tr>
+          <tr><td>Lightning Strike</td><td>Lightning strikes your location.</td></tr>
+          <tr><td>Lava Trap</td><td>Lava on 4 sides. Brief Fire Resistance. Clears after 5 seconds.</td></tr>
+          <tr><td>TNT Trap</td><td>3 TNT spawn around you. ~3-4 seconds to run!</td></tr>
+          <tr><td>Launch Skyward</td><td>Levitation V for 3 seconds.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Mob Spawns (17%)</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Mob</th><th>Stats</th></tr></thead>
+        <tbody>
+          <tr><td>Cursed Zombie (x3)</td><td>30 HP, 5 DMG, iron sword, chainmail armor</td></tr>
+          <tr><td>Haunted Skeleton (x2)</td><td>25 HP, 6 DMG, bow, iron helmet</td></tr>
+          <tr><td>Super Creeper (x1)</td><td>20 HP, explosion radius 4</td></tr>
+          <tr><td>Venomous Spider (x3)</td><td>15 HP, 4 DMG, fast movement</td></tr>
+          <tr><td>Dark Witch (x1)</td><td>40 HP</td></tr>
+          <tr><td>Charged Creeper (x1)</td><td>20 HP, explosion radius 6</td></tr>
+          <tr><td>Mega Slime (x1)</td><td>60 HP, size 8</td></tr>
+          <tr><td>Ghostly Horseman (x1)</td><td>50 HP, 8 DMG, rides skeleton horse</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Troll / Weird (9%)</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Event</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Sky Launch</td><td>Levitation III for 3s, then Slow Falling for 10s</td></tr>
+          <tr><td>Cursed Potato</td><td>1x Poisonous Potato</td></tr>
+          <tr><td>Chicken Explosion</td><td>10 chickens spawn at your location</td></tr>
+          <tr><td>Glow + Speed</td><td>Glowing for 30s, Speed III for 15s</td></tr>
+          <tr><td>Anvil Rain (Blessing?)</td><td>Free anvils from the sky! ...dodge!</td></tr>
+        </tbody>
+      </table>
+
+      <Callout type="tip"><b>Tip:</b> Deposit your coins at the Bank before breaking Lucky Blocks. Some hazards can kill you, and the Death Penalty still applies!</Callout>
     </>
   );
 }

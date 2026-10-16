@@ -44,6 +44,7 @@ export const NAV = [
     { id: 'guides/renametoken', label: 'Rename Token' },
     { id: 'guides/dungeons', label: 'Dungeons' },
     { id: 'guides/recruit', label: 'Party Recruitment' },
+    { id: 'guides/luckyblock', label: 'Lucky Blocks' },
   ]},
   { id: 'help', label: 'Help', children: [
     { id: 'help/faq', label: 'FAQ' },
