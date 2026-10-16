@@ -42,6 +42,8 @@ export const NAV = [
     { id: 'guides/deathpenalty', label: 'Death Penalty' },
     { id: 'guides/afkrewards', label: 'AFK Rewards' },
     { id: 'guides/renametoken', label: 'Rename Token' },
+    { id: 'guides/dungeons', label: 'Dungeons' },
+    { id: 'guides/recruit', label: 'Party Recruitment' },
   ]},
   { id: 'faq', label: 'FAQ' },
 ];

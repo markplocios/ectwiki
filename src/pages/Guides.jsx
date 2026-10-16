@@ -635,3 +635,117 @@ export function RenameToken() {
     </>
   );
 }
+
+export function Dungeons() {
+  return (
+    <>
+      <h1>Dungeons</h1>
+      <p className="page-desc">Team up with other players to conquer instanced dungeons filled with custom bosses, unique mobs, and rare loot.</p>
+
+      <h2>What are Dungeons?</h2>
+      <p>Dungeons are instanced adventures — separate worlds that your party enters together. Each dungeon has custom enemies, mini-bosses, a final boss, and loot chests scattered throughout. When the dungeon ends, everyone is teleported back to the main world.</p>
+
+      <h2>Available Dungeons</h2>
+      <table className="wiki-table">
+        <thead><tr><th>Dungeon</th><th>Party Size</th><th>Lives</th><th>Difficulty</th></tr></thead>
+        <tbody>
+          <tr><td><span style={{ color: '#55FFFF', fontWeight: 700 }}>Snowcloak</span></td><td>1–4 players</td><td>3 lives</td><td>Medium</td></tr>
+          <tr><td><span style={{ color: '#FF5555', fontWeight: 700 }}>Lab of Horrors</span></td><td>1–5 players</td><td>3 lives</td><td>Hard</td></tr>
+        </tbody>
+      </table>
+
+      <h2>How to Enter a Dungeon</h2>
+      <ol>
+        <li><b>Form a party</b> — Use <code>/party invite &lt;player&gt;</code> to invite teammates. Solo players can enter alone.</li>
+        <li><b>Recruit members (optional)</b> — Use <code>/recruit</code> to create a public party listing so other players can find and join your group.</li>
+        <li><b>Start the dungeon</b> — The party leader talks to the dungeon NPC or uses <code>/md play &lt;dungeon&gt;</code> to enter.</li>
+        <li><b>Acknowledge</b> — All party members must accept the dungeon prompt to enter together.</li>
+      </ol>
+
+      <Callout type="info"><b>Your inventory is kept!</b> You enter dungeons with your current gear and keep everything when you leave. Make sure to bring good equipment, food, and potions.</Callout>
+
+      <h2>Inside the Dungeon</h2>
+      <ul>
+        <li><b>Lives</b> — Each player has a limited number of lives (usually 3). Dying uses a life. When all lives are gone, you become a spectator.</li>
+        <li><b>Checkpoints</b> — Walking through certain areas saves your respawn point. If you die, you respawn at the last checkpoint.</li>
+        <li><b>Loot Chests</b> — Interact with glowing chests throughout the dungeon for random loot (crafting materials, rare items).</li>
+        <li><b>Boss Fights</b> — Each dungeon has a final boss. Defeat it to complete the dungeon and earn rewards.</li>
+      </ul>
+
+      <h2>Dungeon Commands</h2>
+      <div className="cmd-list">
+        <div className="cmd-row"><code>/md play &lt;dungeon&gt;</code><span className="cmd-desc">Start a dungeon (party leader only)</span></div>
+        <div className="cmd-row"><code>/md leave</code><span className="cmd-desc">Leave the dungeon and return to the main world</span></div>
+        <div className="cmd-row"><code>/md lives</code><span className="cmd-desc">Check how many lives you have left</span></div>
+        <div className="cmd-row"><code>/md stuck</code><span className="cmd-desc">Teleport to your last checkpoint if you're stuck</span></div>
+      </div>
+
+      <h2>Party Commands</h2>
+      <div className="cmd-list">
+        <div className="cmd-row"><code>/party invite &lt;player&gt;</code><span className="cmd-desc">Invite a player to your party</span></div>
+        <div className="cmd-row"><code>/party</code><span className="cmd-desc">View your party info</span></div>
+        <div className="cmd-row"><code>/recruit</code><span className="cmd-desc">Create a public listing so others can join your party</span></div>
+      </div>
+
+      <h2>Rewards</h2>
+      <p>Completing a dungeon rewards you with:</p>
+      <ul>
+        <li><b>Loot Chest Drops</b> — Crafting materials like Cobalt, Mithril, Steel, and Magic Essence from chests along the way.</li>
+        <li><b>Boss Drops</b> — The final boss drops rare dungeon-exclusive weapons and armor through a loot shower.</li>
+        <li><b>XP</b> — Experience points from killing mobs and bosses.</li>
+      </ul>
+
+      <Callout type="warn"><b>Banned Items:</b> Elytra cannot be used inside dungeons. Certain items may also be restricted — check the dungeon entrance for details.</Callout>
+
+      <h2>Rules & Restrictions</h2>
+      <ul>
+        <li>You <b>cannot break or place blocks</b> inside dungeons.</li>
+        <li>Ender pearls, chorus fruit, and buckets are <b>disabled</b>.</li>
+        <li>If you disconnect, you have <b>5 minutes</b> to rejoin before being kicked from the dungeon.</li>
+        <li>If all party members lose all lives, the dungeon ends and everyone is sent back.</li>
+      </ul>
+
+      <Callout type="tip"><b>Tip:</b> Deposit your coins at the <a href="#npcs/anika" style={{ color: 'var(--gold)' }}>Bank</a> before entering a dungeon. If you die inside, the Death Penalty still applies to your wallet!</Callout>
+    </>
+  );
+}
+
+export function Recruit() {
+  return (
+    <>
+      <h1>Party Recruitment (/recruit)</h1>
+      <p className="page-desc">Find teammates for dungeons by creating or joining public party listings.</p>
+
+      <h2>What is /recruit?</h2>
+      <p>The <code>/recruit</code> command lets you create a public party listing that other players can see and join. It's the easiest way to find teammates for dungeons when your friends aren't online.</p>
+
+      <h2>How It Works</h2>
+      <ol>
+        <li><b>Create a party</b> — Use <code>/party invite &lt;player&gt;</code> if you already have friends, or start solo.</li>
+        <li><b>List your party</b> — Use <code>/recruit</code> to post your party to the public recruitment board.</li>
+        <li><b>Wait for players</b> — Other players browsing <code>/recruit</code> can see your listing and request to join.</li>
+        <li><b>Enter the dungeon</b> — Once your party is ready, the leader starts the dungeon. All members must acknowledge the prompt.</li>
+      </ol>
+
+      <h2>Commands</h2>
+      <div className="cmd-list">
+        <div className="cmd-row"><code>/recruit</code><span className="cmd-desc">Open the recruitment board or create a listing for your party</span></div>
+        <div className="cmd-row"><code>/party invite &lt;player&gt;</code><span className="cmd-desc">Invite a specific player to your party</span></div>
+        <div className="cmd-row"><code>/party</code><span className="cmd-desc">View your current party members</span></div>
+      </div>
+
+      <h2>Step-by-Step: Dungeon with Randoms</h2>
+      <ol>
+        <li>Type <code>/recruit</code> to open the recruitment board.</li>
+        <li>If no listings exist, create one — pick which dungeon you want to run.</li>
+        <li>If a listing already exists, join it.</li>
+        <li>Once the party is full (or the leader is ready), the leader enters the dungeon.</li>
+        <li>All party members get a prompt — <b>acknowledge</b> it to enter together.</li>
+      </ol>
+
+      <Callout type="tip"><b>Tip:</b> You don't need a full party to enter a dungeon. Even solo players can run dungeons — but having teammates makes boss fights much easier and more fun!</Callout>
+
+      <Callout type="info"><b>Party XP:</b> When in a party, experience is split among members. Stick together for the best results.</Callout>
+    </>
+  );
+}
