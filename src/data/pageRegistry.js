@@ -10,6 +10,7 @@ import Tips from '../pages/Tips';
 import { Looloonah, Scout, Haven, Anika, Enchanter, Decipherer, TaskMaster, AstroTommy } from '../pages/Npcs';
 import { Waystones, Rtp, Claims, Teams, Selling, Island, ChestShop, DimensionLock, DeathPenalty, AfkRewards, RenameToken, Dungeons, Recruit } from '../pages/Guides';
 import Faq from '../pages/Faq';
+import Support from '../pages/Support';
 
 const PAGES = {
   welcome: Welcome,
@@ -50,7 +51,8 @@ const PAGES = {
   'guides/renametoken': RenameToken,
   'guides/dungeons': Dungeons,
   'guides/recruit': Recruit,
-  faq: Faq,
+  'help/faq': Faq,
+  'help/support': Support,
 };
 
 export default PAGES;
