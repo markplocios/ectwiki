@@ -833,6 +833,7 @@ export function LuckyBlock() {
       <table className="wiki-table">
         <thead><tr><th>Category</th><th>Chance</th><th>Outcomes</th></tr></thead>
         <tbody>
+          <tr><td><span style={{ color: '#FF55FF', fontWeight: 700 }}>Custom Elytra</span></td><td>0.001%</td><td>4 elytras</td></tr>
           <tr><td><span style={{ color: '#FFAA00', fontWeight: 700 }}>Legendary</span></td><td>0.002%</td><td>5 rewards</td></tr>
           <tr><td><span style={{ color: '#AA00AA', fontWeight: 700 }}>Epic</span></td><td>3%</td><td>8 rewards</td></tr>
           <tr><td><span style={{ color: '#5555FF', fontWeight: 700 }}>Rare</span></td><td>6%</td><td>7 rewards</td></tr>
@@ -846,6 +847,18 @@ export function LuckyBlock() {
       </table>
 
       <Callout type="info"><b>Overall odds:</b> ~35% chance of something good, ~56% chance of something bad, and ~9% chance of something weird. Think twice before breaking one!</Callout>
+
+      <h2>Custom Elytra (0.001%)</h2>
+      <p>The rarest drop in the game. A custom cosmetic elytra — the entire server is notified when someone gets one.</p>
+      <table className="wiki-table">
+        <thead><tr><th>Reward</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Bee Elytra</td><td>Golden bee-themed wings</td></tr>
+          <tr><td>Crow Elytra</td><td>Dark feathered wings</td></tr>
+          <tr><td>Feather Wings Elytra</td><td>Natural feathered wings</td></tr>
+          <tr><td>Fairy Wings Elytra</td><td>Iridescent fairy wings</td></tr>
+        </tbody>
+      </table>
 
       <h2>Legendary Rewards (0.002%)</h2>
       <p>Extremely rare. The entire server is notified when someone gets a Legendary drop.</p>
