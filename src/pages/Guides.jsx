@@ -10,6 +10,10 @@ import shopBedrockInfo from '../assets/shop-bedrock-info.jpeg';
 import shopBedrockAmount from '../assets/shop-bedrock-amount.jpeg';
 import shopBedrockConfirm from '../assets/shop-bedrock-confirm.jpeg';
 import luckyBlockImg from '../assets/lucky-block.png';
+import elytraBee from '../assets/elytra-bee.png';
+import elytraCrow from '../assets/elytra-crow.png';
+import elytraFeather from '../assets/elytra-feather.png';
+import elytraFairy from '../assets/elytra-fairy.png';
 
 export function Waystones() {
   return (
@@ -850,15 +854,24 @@ export function LuckyBlock() {
 
       <h2>Custom Elytra (0.001%)</h2>
       <p>The rarest drop in the game. A custom cosmetic elytra — the entire server is notified when someone gets one.</p>
-      <table className="wiki-table">
-        <thead><tr><th>Reward</th><th>Details</th></tr></thead>
-        <tbody>
-          <tr><td>Bee Elytra</td><td>Golden bee-themed wings</td></tr>
-          <tr><td>Crow Elytra</td><td>Dark feathered wings</td></tr>
-          <tr><td>Feather Wings Elytra</td><td>Natural feathered wings</td></tr>
-          <tr><td>Fairy Wings Elytra</td><td>Iridescent fairy wings</td></tr>
-        </tbody>
-      </table>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', margin: '1rem 0' }}>
+        <figure style={{ margin: 0, textAlign: 'center' }}>
+          <img src={elytraBee} alt="Bee Elytra" style={{ maxWidth: '100%', borderRadius: '8px' }} />
+          <figcaption style={{ marginTop: '0.5rem', fontWeight: 600, color: '#FFAA00' }}>Bee Elytra</figcaption>
+        </figure>
+        <figure style={{ margin: 0, textAlign: 'center' }}>
+          <img src={elytraCrow} alt="Crow Elytra" style={{ maxWidth: '100%', borderRadius: '8px' }} />
+          <figcaption style={{ marginTop: '0.5rem', fontWeight: 600, color: '#555577' }}>Crow Elytra</figcaption>
+        </figure>
+        <figure style={{ margin: 0, textAlign: 'center' }}>
+          <img src={elytraFeather} alt="Feather Wings Elytra" style={{ maxWidth: '100%', borderRadius: '8px' }} />
+          <figcaption style={{ marginTop: '0.5rem', fontWeight: 600, color: '#CCAA88' }}>Feather Wings Elytra</figcaption>
+        </figure>
+        <figure style={{ margin: 0, textAlign: 'center' }}>
+          <img src={elytraFairy} alt="Fairy Wings Elytra" style={{ maxWidth: '100%', borderRadius: '8px' }} />
+          <figcaption style={{ marginTop: '0.5rem', fontWeight: 600, color: '#DD88DD' }}>Fairy Wings Elytra</figcaption>
+        </figure>
+      </div>
 
       <h2>Legendary Rewards (0.002%)</h2>
       <p>Extremely rare. The entire server is notified when someone gets a Legendary drop.</p>
