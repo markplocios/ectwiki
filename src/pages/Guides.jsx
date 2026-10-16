@@ -854,7 +854,7 @@ export function LuckyBlock() {
 
       <h2>Custom Elytra (0.001%)</h2>
       <p>The rarest drop in the game. A custom cosmetic elytra — the entire server is notified when someone gets one.</p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', margin: '1rem 0' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', margin: '1rem 0' }}>
         <figure style={{ margin: 0, textAlign: 'center' }}>
           <img src={elytraBee} alt="Bee Elytra" style={{ maxWidth: '100%', borderRadius: '8px' }} />
           <figcaption style={{ marginTop: '0.5rem', fontWeight: 600, color: '#FFAA00' }}>Bee Elytra</figcaption>
