@@ -235,12 +235,6 @@ export function Selling() {
 
       <Callout type="tip"><b>Bedrock players:</b> Use <b>Select Amount</b> to buy or sell in bulk. Type the number you want and submit — no need to click multiple times.</Callout>
 
-      <h2>Sell Commands</h2>
-      <div className="cmd-list">
-        <div className="cmd-row"><code>/sell hand</code><span className="cmd-desc">Sell the item you're holding</span></div>
-        <div className="cmd-row"><code>/sell handall</code><span className="cmd-desc">Sell all of that item from your inventory</span></div>
-      </div>
-
       <h2>Other Ways to Sell</h2>
       <ul>
         <li><b>Auction House NPC</b> — Talk to the NPC in Town to list items for other players to buy. You'll usually get more than the server shop price.</li>
