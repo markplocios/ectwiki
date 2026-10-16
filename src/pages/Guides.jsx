@@ -649,24 +649,38 @@ export function Dungeons() {
       <table className="wiki-table">
         <thead><tr><th>Dungeon</th><th>Party Size</th><th>Lives</th><th>Difficulty</th></tr></thead>
         <tbody>
-          <tr><td><span style={{ color: '#55FFFF', fontWeight: 700 }}>Snowcloak</span></td><td>1–4 players</td><td>3 lives</td><td>Medium</td></tr>
-          <tr><td><span style={{ color: '#FF5555', fontWeight: 700 }}>Lab of Horrors</span></td><td>1–5 players</td><td>3 lives</td><td>Hard</td></tr>
+          <tr><td><span style={{ color: '#55FFFF', fontWeight: 700 }}>Snowcloak</span></td><td>1–4 players</td><td>3 lives</td><td>Normal / Master</td></tr>
+          <tr><td><span style={{ color: '#FF5555', fontWeight: 700 }}>Lab of Horrors</span></td><td>1–5 players</td><td>3 lives</td><td>Normal / Master</td></tr>
         </tbody>
       </table>
 
+      <h2>Difficulty Levels</h2>
+      <p>When starting a dungeon, you can choose between <b>Normal</b> and <b>Master</b> difficulty.</p>
+      <table className="wiki-table">
+        <thead><tr><th>Stat</th><th>Normal</th><th>Master</th></tr></thead>
+        <tbody>
+          <tr><td>Mob Health</td><td>100%</td><td><span style={{ color: '#FF5555', fontWeight: 700 }}>150%</span></td></tr>
+          <tr><td>Mob Damage</td><td>100%</td><td><span style={{ color: '#FF5555', fontWeight: 700 }}>125%</span></td></tr>
+        </tbody>
+      </table>
+
+      <Callout type="warn"><b>Master mode</b> is for experienced players. Mobs hit harder and take longer to kill. Make sure your party is well-geared before attempting it!</Callout>
+
       <h2>How to Enter a Dungeon</h2>
       <ol>
-        <li><b>Form a party</b> — Use <code>/party invite &lt;player&gt;</code> to invite teammates. Solo players can enter alone.</li>
-        <li><b>Recruit members (optional)</b> — Use <code>/recruit</code> to create a public party listing so other players can find and join your group.</li>
-        <li><b>Start the dungeon</b> — The party leader talks to the dungeon NPC or uses <code>/md play &lt;dungeon&gt;</code> to enter.</li>
+        <li><b>Talk to the Dungeon Master</b> — Find the Dungeon Master NPC and select the dungeon you want to run.</li>
+        <li><b>Recruit your party</b> — Use <code>/recruit</code> to broadcast a public listing. All online players see it and can join.</li>
+        <li><b>Start the dungeon</b> — Once your party is ready, the leader starts the dungeon.</li>
         <li><b>Acknowledge</b> — All party members must accept the dungeon prompt to enter together.</li>
       </ol>
 
-      <Callout type="info"><b>Your inventory is kept!</b> You enter dungeons with your current gear and keep everything when you leave. Make sure to bring good equipment, food, and potions.</Callout>
+      <Callout type="tip"><b>Solo players</b> can also enter dungeons alone without using <code>/recruit</code> — but having teammates makes boss fights much easier!</Callout>
+
+      <Callout type="warn"><b>You drop items on death!</b> If you die inside a dungeon, your inventory drops on the ground. Make sure to pick up your items when you respawn at the checkpoint. Bring good equipment, food, and potions — but leave anything you can't afford to lose behind.</Callout>
 
       <h2>Inside the Dungeon</h2>
       <ul>
-        <li><b>Lives</b> — Each player has a limited number of lives (usually 3). Dying uses a life. When all lives are gone, you become a spectator.</li>
+        <li><b>Lives</b> — Each player has <b>3 lives</b>. Dying uses a life and drops your inventory. When all lives are gone, you become a spectator.</li>
         <li><b>Checkpoints</b> — Walking through certain areas saves your respawn point. If you die, you respawn at the last checkpoint.</li>
         <li><b>Loot Chests</b> — Interact with glowing chests throughout the dungeon for random loot (crafting materials, rare items).</li>
         <li><b>Boss Fights</b> — Each dungeon has a final boss. Defeat it to complete the dungeon and earn rewards.</li>
@@ -721,10 +735,10 @@ export function Recruit() {
 
       <h2>How It Works</h2>
       <ol>
-        <li><b>Create a party</b> — Use <code>/party invite &lt;player&gt;</code> if you already have friends, or start solo.</li>
-        <li><b>List your party</b> — Use <code>/recruit</code> to post your party to the public recruitment board.</li>
-        <li><b>Wait for players</b> — Other players browsing <code>/recruit</code> can see your listing and request to join.</li>
-        <li><b>Enter the dungeon</b> — Once your party is ready, the leader starts the dungeon. All members must acknowledge the prompt.</li>
+        <li><b>Use /recruit</b> — The party leader types <code>/recruit</code> to create a public listing for a dungeon.</li>
+        <li><b>All players see it</b> — A recruitment popup appears for all online players with the option to join.</li>
+        <li><b>Players accept</b> — Interested players click to join the party directly from the popup.</li>
+        <li><b>Enter the dungeon</b> — Once the party is ready, the leader starts the dungeon. All members must acknowledge the prompt.</li>
       </ol>
 
       <h2>Commands</h2>
@@ -734,12 +748,11 @@ export function Recruit() {
         <div className="cmd-row"><code>/party</code><span className="cmd-desc">View your current party members</span></div>
       </div>
 
-      <h2>Step-by-Step: Dungeon with Randoms</h2>
+      <h2>Step-by-Step: Joining a Dungeon Run</h2>
       <ol>
-        <li>Type <code>/recruit</code> to open the recruitment board.</li>
-        <li>If no listings exist, create one — pick which dungeon you want to run.</li>
-        <li>If a listing already exists, join it.</li>
-        <li>Once the party is full (or the leader is ready), the leader enters the dungeon.</li>
+        <li>The party leader types <code>/recruit</code> to broadcast a recruitment listing.</li>
+        <li>A popup appears on your screen — click to join the party.</li>
+        <li>Once the leader is satisfied with the party size, they start the dungeon.</li>
         <li>All party members get a prompt — <b>acknowledge</b> it to enter together.</li>
       </ol>
 
