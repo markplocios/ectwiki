@@ -27,7 +27,7 @@ export default function Sidebar({ currentPage, onNavigate, isOpen, onClose }) {
       />
       <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <span className="sidebar-logo">EXTREMECRAFT</span>
+          <img src="/esc_banner.png" alt="ExtremeCraft" className="sidebar-logo-img" />
           <span className="sidebar-tag">WIKI</span>
         </div>
         <nav className="sidebar-nav">
