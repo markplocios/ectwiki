@@ -46,6 +46,7 @@ export const NAV = [
     { id: 'guides/dungeons', label: 'Dungeons' },
     { id: 'guides/recruit', label: 'Party Recruitment' },
     { id: 'guides/luckyblock', label: 'Lucky Blocks' },
+    { id: 'guides/bedrock', label: 'Bedrock Players (MCPE)' },
   ]},
   { id: 'help', label: 'Help', children: [
     { id: 'help/faq', label: 'FAQ' },

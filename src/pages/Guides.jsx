@@ -10,6 +10,7 @@ import shopBedrockInfo from '../assets/shop-bedrock-info.jpeg';
 import shopBedrockAmount from '../assets/shop-bedrock-amount.jpeg';
 import shopBedrockConfirm from '../assets/shop-bedrock-confirm.jpeg';
 import luckyBlockImg from '../assets/lucky-block.png';
+import bedrockUiProfile from '../assets/bedrock-ui-profile.jpeg';
 import elytraBee from '../assets/elytra-bee.png';
 import elytraCrow from '../assets/elytra-crow.png';
 import elytraFeather from '../assets/elytra-feather.png';
@@ -1002,6 +1003,39 @@ export function LuckyBlock() {
       </table>
 
       <Callout type="tip"><b>Tip:</b> Deposit your coins at the Bank before breaking Lucky Blocks. Some hazards can kill you, and the Death Penalty still applies!</Callout>
+    </>
+  );
+}
+
+export function BedrockPlayers() {
+  return (
+    <>
+      <h1>Bedrock Players (MCPE)</h1>
+      <p className="page-desc">Important settings and info for players joining from Minecraft Bedrock Edition (mobile, console, Windows 10).</p>
+
+      <h2>Fix GUI Display Issues</h2>
+      <p>ExtremeCraft uses custom chest GUIs for shops, quests, dungeons, and many other features. If you're playing on <b>Bedrock Edition (MCPE)</b>, the default Pocket UI may cause these menus to display incorrectly or be difficult to use.</p>
+
+      <p>To fix this, switch your UI Profile to <b>Classic</b>:</p>
+      <ol>
+        <li>Open <b>Settings</b> from the main menu or pause screen.</li>
+        <li>Go to <b>Video</b> on the left sidebar.</li>
+        <li>Scroll down and find <b>UI Profile</b>.</li>
+        <li>Select <b>Classic</b> instead of Pocket.</li>
+      </ol>
+
+      <img src={bedrockUiProfile} alt="Bedrock UI Profile setting — select Classic" style={{ maxWidth: '100%', borderRadius: 8, margin: '1rem 0' }} />
+
+      <p>This changes the chest/inventory interface to look like the Java Edition layout, which is what our custom GUIs are designed for.</p>
+
+      <Callout type="warn"><b>Important:</b> Without Classic UI, many server menus like shops, quest boards, and dungeon selectors may look broken or have misplaced items. Always use Classic mode when playing on ExtremeCraft.</Callout>
+
+      <h2>Known Bedrock Limitations</h2>
+      <p>Even with Classic UI enabled, some custom GUIs may not display perfectly on Bedrock Edition due to platform differences and limitations. Our developers are actively working on improving Bedrock compatibility so that all players can enjoy the full ExtremeCraft experience.</p>
+
+      <p>If you run into any display issues, please report them in our Discord so we can look into it.</p>
+
+      <Callout type="tip"><b>Tip:</b> If a menu looks off, try closing and reopening it. Some GUIs may need a second attempt to render correctly on Bedrock.</Callout>
     </>
   );
 }
