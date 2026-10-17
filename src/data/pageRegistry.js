@@ -52,7 +52,7 @@ const PAGES = {
   'guides/dungeons': Dungeons,
   'guides/recruit': Recruit,
   'guides/luckyblock': LuckyBlock,
-  'guides/bedrock': BedrockPlayers,
+  'help/bedrock-gui': BedrockPlayers,
   'npcs/auctioneer': Auctioneer,
   'help/faq': Faq,
   'help/support': Support,
